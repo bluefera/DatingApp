@@ -17,7 +17,7 @@ namespace API.Data
             .HasData(
                 new AppUser( 1, "Bob"),
                 new AppUser (2, "Tom"),
-                new AppUser (3, "Janer")
+                new AppUser (3, "Janet")
             );
         }
     }
