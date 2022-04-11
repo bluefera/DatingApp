@@ -11,14 +11,5 @@ namespace API.Data
 
         public DbSet<AppUser>Users {get; set;}
 
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
-            modelBuilder.Entity<AppUser>()
-            .HasData(
-                new AppUser( 1, "Bob"),
-                new AppUser (2, "Tom"),
-                new AppUser (3, "Janet")
-            );
-        }
     }
 }
