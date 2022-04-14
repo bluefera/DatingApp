@@ -1,26 +1,42 @@
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Carousel</a>
+    <a class="navbar-brand" href="#">Dating App</a>
+    <!--
+      Para a página ficar responsiva e ao diminuir o tamanho ficar um botão tipo hamburguer à direita
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    Aqui serve para que ao diminuir o ecrã a barra de vaegação continue da mesma altura
     <div class="collapse navbar-collapse" id="navbarCollapse">
+      </div>
+  -->
       <ul class="navbar-nav me-auto mb-2 mb-md-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Matches</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">Lists</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link ">Messages</a>
         </li>
       </ul>
-      <form class="d-flex" data-dashlane-rid="e79f69bd83f05fad" data-form-type="">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" data-dashlane-rid="1504e648617e4f2a" data-form-type="">
-        <button class="btn btn-outline-success" type="submit" data-dashlane-rid="2254101e1c8ed56a" data-form-type="" data-dashlane-label="true">Search</button>
+      <form #loginForm="ngForm" (ngSubmit)="login()" autocomplete="off" class="form-inline mt-2 mt-md-0" >
+        <input
+          name="username"
+          [(ngModel)]="model.username"
+          class="form-control me-2"
+          type="text"
+          placeholder="Username">
+        <input
+        name="password"
+        [(ngModel)]="model.password"
+         class="form-control me-2"
+         type="password"
+         placeholder="Password">
+        <button class="btn btn-outline-success" type="submit">Login</button>
       </form>
     </div>
-  </div>
 
 </nav>
